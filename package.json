@@ -21,7 +21,16 @@
     "node-template",
     "backend-generator"
   ],
-  "author": "Sameer Yadav, Shubham Sinha",
+  "author": {
+  "name": "Sameer Yadav",
+  "email": "sameer.manoj2005@gmail.com"
+},
+"contributors": [
+  {
+    "name": "Shubham Sinha",
+    "email": "shubhamsinha7778@gmail.com"
+  }
+],
   "license": "MIT",
   "type": "module",
   "dependencies": {

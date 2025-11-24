@@ -1,0 +1,35 @@
+{
+  "name": "create-node-app-latest",
+  "version": "1.0.0",
+  "description": "CLI tool to generate Node.js (JS/TS) Express apps",
+  "bin": {
+    "create-node": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "templates",
+    "utils"
+  ],
+  "scripts": {
+    "dev": "node bin/index.js"
+  },
+  "keywords": [
+    "cli",
+    "express",
+    "nodejs",
+    "node-app",
+    "node-template",
+    "backend-generator"
+  ],
+  "author": "Sameer Yadav, Shubham Sinha",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "execa": "^9.6.0",
+    "fs-extra": "^11.3.2",
+    "handlebars": "^4.7.8",
+    "ora": "^9.0.0"
+  }
+}

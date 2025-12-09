@@ -5,6 +5,7 @@ import type { Request, Response, NextFunction } from "express";
 import ExpressError from "./utils/ExpressError.js";
 import connectDb from "./config/Db.js";
 import mainRouter from "./routes/main.route.js";
+import cookieparser from 'cookie-parser'
 
 dotenv.config();
 const app = express();
@@ -17,6 +18,7 @@ app.use(cors({
   origin:process.env.CLIENT_URL,
   credentials: true
 }))
+app.use(cookieparser())
 
 //routes 
 

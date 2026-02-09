@@ -3,16 +3,16 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export default async function connectDb(dbName) {
+export default async function connectDb(){
   const connectionString = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017";
-
   try {
     await mongoose.connect(connectionString, {
-      dbName: dbName,
+      dbName,
     });
 
     console.log("✅ MongoDB connected");
-  } catch (error) {
+  } 
+  catch (error) {
     console.error("❌ MongoDB connection failed: please setup your mongodb connection string in env variables");
     process.exit(1);
   }

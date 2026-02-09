@@ -1,7 +1,13 @@
-export default class ExpressError extends Error {
-  constructor(statusCode = 500, message = 'Internal Server Error') {
-    super();
-    this.statusCode = statusCode;
-    this.message = message;
-  }
+class ExpressError extends Error
+{
+     status;
+    constructor(status,message)
+    {
+        super(message);
+        this.status = status;
+        this.message = message;
+    }
 }
+
+export default ExpressError;
+

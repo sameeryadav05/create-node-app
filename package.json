@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A cli tool to create node.js backend application 10x faster than before with built in support for express server,middlewares,error handlers,jwt helper function,mongodb connection,http status codes helpers,functional cookie based Authentication with controllers and user models with otp verification endpoints, support for both typescript as well as javascript",
   "bin": {
-    "create-node": "bin/index.js"
+    "node-app": "bin/index.js"
   },
   "files": [
     "bin",

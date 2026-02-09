@@ -1,23 +1,28 @@
-import jwt from 'jsonwebtoken';
+import jwt, { JwtPayload } from "jsonwebtoken";
 
-export const generateToken = (userId, expiresIn = '30d') => {
-  return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
-    expiresIn,
-  });
-};
+const JWT_SECRET = process.env.JWT_SECRET
 
-export const verifyToken = (token) => {
+if (!JWT_SECRET) {
+  throw new Error("JWT_SECRET is not defined in environment variables");
+}
+
+export function sendToken(userId) {
+  const token = jwt.sign(
+    { userId },         
+    JWT_SECRET,
+    {
+      expiresIn: "7d",
+    }
+  );
+
+  return token;
+}
+
+export function verifyToken(token){
   try {
-    return jwt.verify(token, process.env.JWT_SECRET);
+    const isValid = jwt.verify(token, JWT_SECRET)
+    return isValid;
   } catch (error) {
-    throw new Error('Invalid or expired token');
+    return false;
   }
-};
-
-export const decodeToken = (token) => {
-  try {
-    return jwt.decode(token);
-  } catch (error) {
-    throw new Error('Error decoding token');
-  }
-};
+}

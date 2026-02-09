@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-const { Schema } = mongoose;
+
 
 const userSchema = new Schema({
   name: {
@@ -18,8 +18,8 @@ const userSchema = new Schema({
 
   password: {
     type: String,
-    required: true,
-    select: false,
+    required: true,   
+    select: false,       
   },
 
   mobile: {
@@ -28,11 +28,11 @@ const userSchema = new Schema({
 
   isVerified: {
     type: Boolean,
-    default: false,
+    default: false,   
   },
 
   otp: {
-    type: Number,
+    type: Number,      
   },
 
   otpExp: {

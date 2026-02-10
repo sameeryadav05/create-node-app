@@ -19,7 +19,7 @@ npm install -g create-node-app-latest
 
 #1 Help command
 ```bash
-node-app -help
+node-app --help
 ```
 
 #2 Javascript Template

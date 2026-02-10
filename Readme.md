@@ -11,9 +11,16 @@ CLI tool to scaffold a production-ready Node.js backend in seconds.
 - Error handlers
 - Supports JavaScript & TypeScript
 
-## Install
+## Installation
+
+install globally
 ```bash
 npm install -g create-node-app-latest
+```
+
+Or use directly with npx (recommended):
+```bash
+npx create-node-app-latest myapp
 ```
 ## Usage
 
